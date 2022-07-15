@@ -1,0 +1,17 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+.footer{
+/*  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;*/
+  //background-color: red;
+  //background-color: #fff;
+  background-color: black;
+  //color: #ac9765;
+  color: black;
+  text-align: center;
+}
+.zertifier-img{
+  width: 160px;
+}

@@ -1,0 +1,12 @@
+<div class="modal-header">
+  <h4 class="modal-title text-body">QR Exporter</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  </button>
+</div>
+<div class="modal-body">
+   <qrcode *ngIf="qrExporterService.qrData" [elementType]="'img'" [qrdata]="qrExporterService.qrData"
+           [errorCorrectionLevel]="'H'"></qrcode>
+</div>
+<div class="modal-footer justify-content-center">
+  <button type="button" class="btn btn-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

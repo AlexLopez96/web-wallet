@@ -1,0 +1,76 @@
+<!--<div *ngIf="passwordMode">
+  <div class="my-3">
+    <h4 class="modal-title text-body text-center">Set password</h4>
+  </div>
+  <div>
+    <div id="set-password">
+      <app-show-hide-input-text>
+        <input [(ngModel)]="password" [ngClass]="{'is-invalid': passwordErr}" type="password"
+               class="form-control" [placeholder]="'Password'">
+      </app-show-hide-input-text>
+      <app-show-hide-input-text>
+        <input [(ngModel)]="repeatPassword" [ngClass]="{'is-invalid': repeatPasswordErr}"
+               type="password" class="form-control"
+               [placeholder]="'Repeat password'">
+      </app-show-hide-input-text>
+
+      <div *ngIf="passwordErrText" class="invalid mb-2">{{passwordErrText}}</div>
+
+      <p class="text-justify">
+        <small [innerHTML]="'Remember password'">
+        </small>
+      </p>
+
+    </div>
+    <div *ngIf="step == 'walletInfo'">
+      <app-home></app-home>
+    </div>
+  </div>
+  <div class="modal-footer justify-content-center">
+    <button (click)="back()" class="btn btn-dark me-3">Back</button>
+    <button (click)="confirm()" class="btn btn-primary">Ok</button>
+  </div>
+</div>-->
+
+<!--<div *ngIf="!passwordMode">-->
+<div>
+  <div class="modal-header">
+    <h4 class="modal-title text-body text-center">Import Private Key</h4>
+    <!--<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>-->
+  </div>
+  <div class="modal-body">
+    <app-show-hide-input-text [importQr]="true">
+      <input [(ngModel)]="privateKey" type="password" class="form-control"
+             [placeholder]="'Private key'">
+    </app-show-hide-input-text>
+
+    <app-show-hide-input-text>
+      <input [(ngModel)]="password" [ngClass]="{'is-invalid': passwordErr}" type="password"
+             class="form-control" [placeholder]="'Password'">
+    </app-show-hide-input-text>
+    <app-show-hide-input-text>
+      <input [(ngModel)]="repeatPassword" [ngClass]="{'is-invalid': repeatPasswordErr}"
+             type="password" class="form-control"
+             [placeholder]="'Repeat password.'">
+    </app-show-hide-input-text>
+
+    <div *ngIf="passwordErrText" class="invalid mb-2">{{passwordErrText}}</div>
+    <div *ngIf="privateKeyErr" class="invalid mb-2">
+      Error password
+    </div>
+    <p class="text-justify">
+      <small [innerHTML]="'Remember password'">
+      </small>
+    </p>
+  </div>
+  <div class="modal-footer justify-content-center">
+    <button (click)="back()" type="button" class="btn btn-dark float-left me-3">
+      Back
+    </button>
+    <button (click)="login()" type="button" class="btn btn-primary float-left">
+      Login
+    </button>
+  </div>
+</div>

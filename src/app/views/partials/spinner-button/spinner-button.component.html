@@ -1,0 +1,5 @@
+<button [className]="options.type ? 'btn btn-'+options.type: 'btn btn-primary'" type="button"
+        [disabled]="options.loading && options.disabled !== false && downloadService.verifiedPassword">
+    <ng-content></ng-content>
+    <i *ngIf="options.loading && downloadService.verifiedPassword" class="fa fa-spinner fa-spin ml-2"></i>
+</button>

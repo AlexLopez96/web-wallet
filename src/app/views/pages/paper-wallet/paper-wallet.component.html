@@ -1,0 +1,37 @@
+<div class="m-3">
+  <div id="paper-wallet" class="row">
+    <!--<div id="hash4life-info" class="vertical-orientation col">
+      <h2 class="m-0">WALLET</h2>
+    </div>-->
+    <div class="col-md-12">
+      <div class="row ">
+        <div class="">
+          <div class="row no-gutters d-flex justify-content-center">
+<!--          <div class="row no-gutters">-->
+            <div class="col-auto mt-2 ">
+<!--            <div class="col-auto mt-2">-->
+              <qrcode [qrdata]="wallet.address" [errorCorrectionLevel]="'L'" [elementType]="'img'" [colorLight]="'#0000'"></qrcode>
+            </div>
+          <!--  <div class="col-auto vertical-orientation">
+              <p class="m-0">YOUR ADDRESS</p>
+            </div>-->
+          </div>
+        </div>
+        <!--<div class="col-md-6">
+          <div class="row no-gutters">
+            <div class="col-auto mt-2">
+              <qrcode [qrdata]="wallet.privateKey" [errorCorrectionLevel]="'L'" [elementType]="'img'" [colorLight]="'#0000'"></qrcode>
+            </div>
+            <div class="col-auto vertical-orientation">
+              <p class="m-0">YOUR PRIVATE KEY</p>
+            </div>
+          </div>
+        </div>-->
+      </div>
+      <p class="font-weight-bold mb-0 text-center">Your Address</p>
+      <p class="mb-2 text-center">{{wallet.address}}</p>
+      <p class="font-weight-bold mb-0 text-center">Your Private key</p>
+      <p class="text-center">{{wallet.privateKey}}</p>
+    </div>
+  </div>
+</div>
