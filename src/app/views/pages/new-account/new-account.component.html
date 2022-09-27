@@ -38,21 +38,23 @@
     <div class="mt-3 d-fex justify-content-center">
 
         <h5 class="text-center">Wallet address</h5>
-        <qrcode [qrdata]="wallet.address" [width]="20" [errorCorrectionLevel]="'L'" [elementType]="'img'"
-                [margin]="0" [colorLight]="'#0000'"></qrcode>
+        <!--<qrcode [qrdata]="wallet.address" [width]="20" [errorCorrectionLevel]="'L'" [elementType]="'img'"
+                [margin]="0" [colorLight]="'#0000'"></qrcode>-->
+      <ngx-qrcode-styling [config]="config"></ngx-qrcode-styling>
+
     </div>
     <div class="mt-3 d-fex justify-content-center">
       <h5 class="d-none">Wallet address</h5>
       <div class="input-group mb-3">
-        <input [ngModel]="wallet.address" class="form-control text-center" type="text" selectAll readonly
-               id="wallet-input">
+        <input [ngModel]="wallet.address" (click)="copy(wallet.address)" class="copy-data form-control text-center"
+               title="Copied!" type="text" selectAll readonly id="wallet-input">
       </div>
 
       <ng-container *ngIf="wallet.privateKey">
         <h5>Private key</h5>
         <app-show-hide-input-text [exportQr]="true">
-          <input [ngModel]="wallet.privateKey" [attr.data-text]="wallet.privateKey"
-                 data-toggle="tooltip" title="Copied!"
+          <input [ngModel]="wallet.privateKey" [attr.data-text]="wallet.privateKey" (click)="copy(wallet.privateKey)"
+                 title="Copied!"
                  type="password" class="copy-data form-control text-center"
                  placeholder="Password" selectAll readonly>
         </app-show-hide-input-text>
@@ -61,7 +63,8 @@
         <ng-container *ngIf="newUserMode && wallet.mnemonic.phrase">
           <h5>Mnemonic phrase</h5>
           <app-show-hide-input-text>
-            <input [ngModel]="wallet.mnemonic.phrase" [attr.data-text]="wallet.mnemonic.phrase" type="password"
+            <input [ngModel]="wallet.mnemonic.phrase" [attr.data-text]="wallet.mnemonic.phrase" (click)="copy(wallet.mnemonic.phrase)"
+                   ng-click="displayTooltip = true" type="password"
                    title="Copied!" class="copy-data form-control text-center"
                    [placeholder]="'Mnemonic phrase'" selectAll readonly>
           </app-show-hide-input-text>

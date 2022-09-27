@@ -14,6 +14,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { NewAccountComponent } from './views/pages/new-account/new-account.component';
 import { QrImporterModalComponent } from './views/partials/qr-importer-modal/qr-importer-modal.component';
+import {NgxQrcodeStylingModule} from "ngx-qrcode-styling";
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { QrImporterModalComponent } from './views/partials/qr-importer-modal/qr-
         QRCodeModule,
         RouterModule,
         ShowHideInputTextModule,
-        SpinnerButtonModule
+        SpinnerButtonModule,
+        NgxQrcodeStylingModule
     ],
   providers: [NewAccountComponent],
   bootstrap: [AppComponent]
