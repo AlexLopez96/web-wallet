@@ -53,8 +53,8 @@ export class NewAccountComponent implements OnInit {
     this.createWallet()
 
     this.config = {
-      width: 258,
-      height: 258,
+      width: 190,
+      height: 190,
       data: this.wallet.address,
       image: "assets/img/iconwhite-background.png",
       margin: 5,
