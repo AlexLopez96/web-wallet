@@ -19,9 +19,9 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
     ]),
     trigger('fadeTransitionMoon', [
       state('initial', style({ transform: 'translateX(-100%)', opacity: 0 })),
-      state('final', style({ transform: 'translateX(50%)', opacity: 1 })),
+      state('final', style({ transform: 'translateX(20%)', opacity: 1 })),
       transition('initial => final', [
-        animate('500ms ease-in', style({ transform: 'translateX(50%)', opacity: 1 })),
+        animate('500ms ease-in', style({ transform: 'translateX(20%)', opacity: 1 })),
       ]),
       transition('final => initial', [
         animate('500ms ease-out', style({ transform: 'translateX(-100%)', opacity: 0 })),
@@ -38,6 +38,8 @@ export class ThemeButtonComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if (this.themeService.isDarkTheme)
+      this.toggleTransition()
   }
 
 

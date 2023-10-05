@@ -1,9 +1,9 @@
 <button class="rounded-5 border-0" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite"
         (click)="changeLightDark()">
 
-  <img id="sunImg" [@fadeTransitionSun]="currentState" class="color-change"
+  <img id="sunImg" [@fadeTransitionSun]="currentState"
        src="assets/img/theme/sun.svg" alt="Light image">
-  <img id="moonImg" [@fadeTransitionMoon]="currentState"
+  <img id="moonImg" [@fadeTransitionMoon]="currentState" class="color-change"
        src="assets/img/theme/moon.svg" alt="Dark image">
 
 </button>
