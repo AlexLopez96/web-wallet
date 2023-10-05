@@ -1,3 +1,19 @@
 #wallet-input{
   background-color: transparent !important;
 }
+
+/* Light theme button styles */
+.light-theme-button {
+  background-color: #f0f0f0; /* Light background color */
+  color: #333; /* Text color for light theme */
+  border: 1px solid #ddd; /* Light border */
+  /* Add more light theme styles as needed */
+}
+
+/* Dark theme button styles */
+.dark-theme-button {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color for dark theme */
+  border: 1px solid #555; /* Dark border */
+  /* Add more dark theme styles as needed */
+}

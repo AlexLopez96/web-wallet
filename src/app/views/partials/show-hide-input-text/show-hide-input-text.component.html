@@ -2,13 +2,13 @@
   <ng-content></ng-content>
 
 
-    <button *ngIf="exportQr && !emptyValue" (click)="showQrExporter()" class="btn btn-form" type="button">
+    <button *ngIf="exportQr && !emptyValue" (click)="showQrExporter()" class="btn btn-form border-0 text-black" type="button">
       <i class="fas fa-qrcode"></i>
     </button>
-    <button *ngIf="importQr" (click)="showQrImporter()" class="btn btn-form" type="button">
+    <button *ngIf="importQr" (click)="showQrImporter()" class="btn btn-form border-0 text-black" type="button">
       <i class="fas fa-camera"></i>
     </button>
-    <button (click)="toggleShow()" class="btn btn-form" type="button">
+    <button (click)="toggleShow()" class="btn btn-form border-0 text-black" type="button">
       <i class="fas" [ngClass]="{'fa-eye-slash': !isHidden, 'fa-eye': isHidden}"></i>
     </button>
 

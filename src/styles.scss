@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~codemirror/lib/codemirror';
-@import '~codemirror/theme/material';
+@import 'codemirror/lib/codemirror';
+@import 'codemirror/theme/material';
 
 
 @font-face {
@@ -81,6 +81,9 @@ $card-cap-bg: #000;
 $card-cap-color: #fff;
 $card-border-width: 2px;
 $card-border-color: $primary;
+
+//$light: $backgroundColor;
+$hover: #de7171;
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
   font-weight: bold;
@@ -188,7 +191,16 @@ body {
   font-size: 15px;
   line-height: 1.86;
   font-weight: 300;
+  //background-color: $backgroundColor;
+  //color: $dark;
+}
+
+[data-bs-theme="light"] body{
   background-color: $backgroundColor;
+  color: $dark;
+}
+
+[data-bs-theme="dark"] .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating){
   color: $dark;
 }
 
@@ -215,7 +227,7 @@ p{
 //}
 
 .modal-content .card {
-  background-color: #fff;
+  //background-color: #fff;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -249,6 +261,10 @@ p{
   color: black !important;
 }
 
+[data-bs-theme="dark"] .btn-dark{
+  background-color: white;
+  color: black;
+}
 .table-icon{
   height: 26px;
   margin-top: 10px;
@@ -314,12 +330,12 @@ p.slogan {
   line-height: 1.68;
 }
 
-.modal-header, .modal-footer{
+[data-bs-theme="light"] .modal-header, [data-bs-theme="light"] .modal-footer{
   border: none !important;
   background-color: $backgroundColor;
 }
 
-.modal-body{
+[data-bs-theme="light"] .modal-body{
   background-color: $backgroundColor;
 }
 
@@ -390,7 +406,7 @@ p.slogan {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  //color: #495057;
   background-color: #fff;
   //background-color: $input-grey;
   background-clip: padding-box;
@@ -691,9 +707,16 @@ table{
   border-color: #1f146c;
 }
 
-.btn-form{
+.btn-form {
   background-color: white;
   color: black;
+  margin-top: 1px;
+  height: 36px;
+}
+
+.btn-form:hover, .btn-form:active, .btn-form:focus-visible{
+  background-color: $secondaryDarker !important;
+  //color: black;
 }
 
 .btn-form-table{

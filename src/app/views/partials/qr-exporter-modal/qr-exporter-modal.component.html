@@ -5,7 +5,7 @@
 </div>
 <div class="modal-body">
    <qrcode *ngIf="qrExporterService.qrData" [elementType]="'img'" [qrdata]="qrExporterService.qrData"
-           [errorCorrectionLevel]="'H'" [colorLight]="'#0000'"></qrcode>
+           [errorCorrectionLevel]="'H'" [colorLight]="'#f7f7f7'" [colorDark]="'#000'" ></qrcode>
 </div>
 <div class="modal-footer justify-content-center">
   <button type="button" class="btn btn-dark" (click)="activeModal.close('Close click')">Close</button>

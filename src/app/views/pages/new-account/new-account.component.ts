@@ -3,6 +3,7 @@ import {WebWalletService} from "../../../services/web-wallet/web-wallet.service"
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {Options} from "ngx-qrcode-styling";
 import {UtilsService} from "../../../services/utils/utils.service";
+import {ThemeService} from "../../../services/theme/theme.service";
 
 declare var $: any;
 declare var window: any;
@@ -44,7 +45,8 @@ export class NewAccountComponent implements OnInit {
   constructor(
     public modalService: NgbModal,
     public walletService:  WebWalletService,
-    public utils: UtilsService
+    public utils: UtilsService,
+    public themeService: ThemeService
   ) {
 
   }
@@ -63,7 +65,8 @@ export class NewAccountComponent implements OnInit {
         type: "classy"
       },
       backgroundOptions: {
-        color: "#0000",
+        color: "#f7f7f7",
+        round: 0,
       },
       imageOptions: {
         crossOrigin: "anonymous",
@@ -89,4 +92,6 @@ export class NewAccountComponent implements OnInit {
     const item = [new ClipboardItem({[type]: blob})]
     await navigator.clipboard.write(item);
   }
+
+
 }
